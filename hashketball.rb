@@ -139,7 +139,15 @@ def num_points_scored(player)
         x = 0
         v.length.times do
           temp = v[x]
-          
+          if temp[:player_name] == player
+            ans = temp[point]
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
   
 end
 
