@@ -235,7 +235,8 @@ def player_stats(name)
   ans = {}
   game = game_hash
   game.each do |key, value|
-    
+    value.each do |k, v|
+      
   
 end
 
