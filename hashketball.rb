@@ -236,7 +236,19 @@ def player_stats(name)
   game = game_hash
   game.each do |key, value|
     value.each do |k, v|
-      
+      if k == :players
+        x = 0
+        v.length.times do
+          temp = v[x]
+          if temp[:player_name] == name
+            ans = temp
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
   
 end
 
@@ -244,7 +256,25 @@ end
 #  returns the number of rebounds of the player with the biggest shoe size (FAILED - 8)
 def big_shoe_rebounds
   
-  
+  ans = 0
+  size = 0
+  game = game_hash
+  game.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        x = 0
+        v.length.times do
+          temp = v[x]
+          if temp[:shoe] > size
+            size = temp[:shoe]
+            ans = temp[:rebounds]
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
   
 end
 
