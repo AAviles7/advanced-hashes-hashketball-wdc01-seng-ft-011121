@@ -217,6 +217,12 @@ def player_numbers(team)
           x = 0
           v.length.times do
             temp = v[x]
+            ans.push(temp[:shoe])
+            x += 1
+          end
+        end
+      end
+    end
   end
   return ans
   
