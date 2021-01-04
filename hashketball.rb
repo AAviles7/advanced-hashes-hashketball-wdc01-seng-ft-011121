@@ -153,18 +153,38 @@ end
 
 #shoe_size
 #  knows the shoe size of each player (FAILED - 2)
-def shoe_size
+def shoe_size(player)
   
-  
+  ans = 0
+  game = game_hash
+  game.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        x = 0
+        v.length.times do
+          temp = v[x]
+          if temp[:player_name] == player
+            ans = temp[:shoe]
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
   
 end
 
 #team_colors
 #  knows the Brooklyn Nets colors are Black and White (FAILED - 3)
 #  knows the Charlotte Hornets colors are Turquoise and Purple (FAILED - 4)
-def team_colors
+def team_colors(team)
   
-  
+  ans = Array.new
+  game = game_hash
+  game.each do |key, value|
+    value.each do |k, v|
+      if k == :players
   
 end
 
