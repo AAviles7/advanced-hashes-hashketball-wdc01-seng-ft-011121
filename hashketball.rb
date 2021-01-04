@@ -206,23 +206,17 @@ end
 
 #player_numbers
 #  returns the player jersey numbers (FAILED - 6)
-def player_numbers
+def player_numbers(team)
   
   ans = []
   game = game_hash
   game.each do |key, value|
-    value.each do |k, v|
-      if k == :players
-        x = 0
-        v.length.times do
-          temp = v[x]
-          if temp[:player_name] == player
-            ans = temp[:shoe]
-          end
-          x += 1
-        end
-      end
-    end
+    if value[:team_name] == team
+      value.each do |k, v|
+        if k == :players
+          x = 0
+          v.length.times do
+            temp = v[x]
   end
   return ans
   
