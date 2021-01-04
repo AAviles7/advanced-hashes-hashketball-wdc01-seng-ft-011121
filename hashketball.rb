@@ -180,10 +180,12 @@ end
 #  knows the Charlotte Hornets colors are Turquoise and Purple (FAILED - 4)
 def team_colors(team)
   
-  ans = []]
+  ans = []
   game = game_hash
   game.each do |key, value|
-    if key == team
+    if value[:team_name] == team
+      ans = value[:colors]
+    end
   end
   return ans
   
