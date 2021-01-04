@@ -180,7 +180,7 @@ end
 #  knows the Charlotte Hornets colors are Turquoise and Purple (FAILED - 4)
 def team_colors(team)
   
-  ans = Array.new
+  ans = []]
   game = game_hash
   game.each do |key, value|
     value.each do |k, v|
