@@ -198,9 +198,7 @@ def team_names
   ans = []
   game = game_hash
   game.each do |key, value|
-    if value[:team_name] == team
-      ans = value[:colors]
-    end
+    ans.push(value[:team_name])
   end
   return ans
   
