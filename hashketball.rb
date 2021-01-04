@@ -195,7 +195,14 @@ end
 #  returns the team names (FAILED - 5)
 def team_names
   
-  
+  ans = []
+  game = game_hash
+  game.each do |key, value|
+    if value[:team_name] == team
+      ans = value[:colors]
+    end
+  end
+  return ans
   
 end
 
