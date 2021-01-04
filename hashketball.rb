@@ -133,7 +133,7 @@ def num_points_scored(player)
   
   ans = 0
   game = game_hash
-  game.each do |key value|
+  game.each do |key, value|
     value.each do |k, v|
       if k == :players
         x = 0
