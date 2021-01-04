@@ -230,9 +230,12 @@ end
 
 #player_stats
 #  returns all stats for a given player (FAILED - 7)
-def player_stats(team)
+def player_stats(name)
   
-  
+  ans = {}
+  game = game_hash
+  game.each do |key, value|
+    
   
 end
 
