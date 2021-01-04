@@ -129,9 +129,9 @@ end
 # Write code here
 #num_points_scored
 #  knows the number of points scored by each player (FAILED - 1)
-def num_points_scored
+def num_points_scored(player)
   
-  
+  game_hash
   
 end
 
