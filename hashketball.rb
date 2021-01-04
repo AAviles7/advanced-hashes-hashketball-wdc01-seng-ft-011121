@@ -128,7 +128,7 @@ end
 
 # Write code here
 #num_points_scored
-#  knows the number of points scored by each player (FAILED - 1)
+#  knows the number of points scored by each player
 def num_points_scored(player)
   
   ans = 0
@@ -152,7 +152,7 @@ def num_points_scored(player)
 end
 
 #shoe_size
-#  knows the shoe size of each player (FAILED - 2)
+#  knows the shoe size of each player
 def shoe_size(player)
   
   ans = 0
@@ -176,8 +176,8 @@ def shoe_size(player)
 end
 
 #team_colors
-#  knows the Brooklyn Nets colors are Black and White (FAILED - 3)
-#  knows the Charlotte Hornets colors are Turquoise and Purple (FAILED - 4)
+#  knows the Brooklyn Nets colors are Black and White
+#  knows the Charlotte Hornets colors are Turquoise and Purple
 def team_colors(team)
   
   ans = []
@@ -192,7 +192,7 @@ def team_colors(team)
 end
 
 #team_names
-#  returns the team names (FAILED - 5)
+#  returns the team names
 def team_names
   
   ans = []
@@ -205,7 +205,7 @@ def team_names
 end
 
 #player_numbers
-#  returns the player jersey numbers (FAILED - 6)
+#  returns the player jersey numbers
 def player_numbers(team)
   
   ans = []
@@ -229,7 +229,7 @@ def player_numbers(team)
 end
 
 #player_stats
-#  returns all stats for a given player (FAILED - 7)
+#  returns all stats for a given player
 def player_stats(name)
   
   ans = {}
@@ -253,7 +253,7 @@ def player_stats(name)
 end
 
 #big_shoe_rebounds
-#  returns the number of rebounds of the player with the biggest shoe size (FAILED - 8)
+#  returns the number of rebounds of the player with the biggest shoe size
 def big_shoe_rebounds
   
   ans = 0
@@ -277,28 +277,3 @@ def big_shoe_rebounds
   return ans
   
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
