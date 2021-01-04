@@ -131,8 +131,11 @@ end
 #  knows the number of points scored by each player (FAILED - 1)
 def num_points_scored(player)
   
+  ans = 0
   game = game_hash
-  
+  game.each do |key value|
+    value.each do |k, v|
+      
   
 end
 
