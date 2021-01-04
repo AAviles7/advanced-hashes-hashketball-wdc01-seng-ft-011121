@@ -127,3 +127,153 @@ def game_hash
 end
 
 # Write code here
+#num_points_scored
+#  knows the number of points scored by each player
+def num_points_scored(player)
+  
+  ans = 0
+  game = game_hash
+  game.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        x = 0
+        v.length.times do
+          temp = v[x]
+          if temp[:player_name] == player
+            ans = temp[:points]
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
+  
+end
+
+#shoe_size
+#  knows the shoe size of each player
+def shoe_size(player)
+  
+  ans = 0
+  game = game_hash
+  game.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        x = 0
+        v.length.times do
+          temp = v[x]
+          if temp[:player_name] == player
+            ans = temp[:shoe]
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
+  
+end
+
+#team_colors
+#  knows the Brooklyn Nets colors are Black and White
+#  knows the Charlotte Hornets colors are Turquoise and Purple
+def team_colors(team)
+  
+  ans = []
+  game = game_hash
+  game.each do |key, value|
+    if value[:team_name] == team
+      ans = value[:colors]
+    end
+  end
+  return ans
+  
+end
+
+#team_names
+#  returns the team names
+def team_names
+  
+  ans = []
+  game = game_hash
+  game.each do |key, value|
+    ans.push(value[:team_name])
+  end
+  return ans
+  
+end
+
+#player_numbers
+#  returns the player jersey numbers
+def player_numbers(team)
+  
+  ans = []
+  game = game_hash
+  game.each do |key, value|
+    if value[:team_name] == team
+      value.each do |k, v|
+        if k == :players
+          x = 0
+          v.length.times do
+            temp = v[x]
+            ans.push(temp[:number])
+            x += 1
+          end
+        end
+      end
+    end
+  end
+  return ans
+  
+end
+
+#player_stats
+#  returns all stats for a given player
+def player_stats(name)
+  
+  ans = {}
+  game = game_hash
+  game.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        x = 0
+        v.length.times do
+          temp = v[x]
+          if temp[:player_name] == name
+            ans = temp
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
+  
+end
+
+#big_shoe_rebounds
+#  returns the number of rebounds of the player with the biggest shoe size
+def big_shoe_rebounds
+  
+  ans = 0
+  size = 0
+  game = game_hash
+  game.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        x = 0
+        v.length.times do
+          temp = v[x]
+          if temp[:shoe] > size
+            size = temp[:shoe]
+            ans = temp[:rebounds]
+          end
+          x += 1
+        end
+      end
+    end
+  end
+  return ans
+  
+end
