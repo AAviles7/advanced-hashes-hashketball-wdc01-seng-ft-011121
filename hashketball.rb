@@ -135,7 +135,7 @@ def num_points_scored(player)
   game = game_hash
   game.each do |key value|
     value.each do |k, v|
-      
+      if v.is_a
   
 end
 
